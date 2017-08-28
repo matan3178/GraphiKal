@@ -44,6 +44,49 @@
           "link": "C:/D/B/Project-image.png"
         }
       ]
+    },
+    {
+      "type" : "category",
+      "name": "Head & Shoulders",
+      "neighbors": [
+        {
+          "type" : "file",
+          "name": "cyber.txt",
+          "link": "C:/A/D/D/Team1.txt"
+        },
+        {
+          "type" : "file",
+          "name": "shower.txt",
+          "link": "C:/D/B/shower.txt"
+        }
+      ]
+    },
+    {
+      "type" : "category",
+      "name": "GUI",
+      "neighbors": [
+        {
+          "type" : "file",
+          "name": "inrtoduction to GUI.pptx",
+          "link": "C:/A/B/Inheritance.ppt"
+        },
+        {
+          "type" : "category",
+          "name": "Swing",
+          "neighbors": [
+            {
+              "type" : "file",
+              "name": "JFrames.pptx",
+              "link": "C:/A/C/L/Generics.pdf"
+            },
+            {
+              "type" : "file",
+              "name": "example.png",
+              "link": "C:/A/D/L/Streams.docx"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
