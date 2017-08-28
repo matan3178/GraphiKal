@@ -10,6 +10,7 @@
           "type" : "file",
           "name": "Inheritance.pptx",
           "link": "C:/A/B/Inheritance.ppt"
+          "desc" : "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede"
         },
         {
           "type" : "category",
@@ -19,11 +20,13 @@
               "type" : "file",
               "name": "Generics.pdf",
               "link": "C:/A/C/L/Generics.pdf"
+              "desc" : "1Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
             },
             {
               "type" : "file",
               "name": "Streams.docx",
               "link": "C:/A/D/L/Streams.docx"
+              "desc" : "2Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
             }
           ]
         }
@@ -37,11 +40,13 @@
           "type" : "file",
           "name": "Team1.xls",
           "link": "C:/A/D/D/Team1.xlsx"
+          "desc" : "3Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
         },
         {
           "type" : "file",
           "name": "Project-image.jpeg",
           "link": "C:/D/B/Project-image.png"
+          "desc" : "4Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
         }
       ]
     },
@@ -53,11 +58,13 @@
           "type" : "file",
           "name": "cyber.txt",
           "link": "C:/A/D/D/Team1.txt"
+          "desc" : "5Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
         },
         {
           "type" : "file",
           "name": "shower.txt",
           "link": "C:/D/B/shower.txt"
+          "desc" : "6Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
         }
       ]
     },
@@ -69,6 +76,7 @@
           "type" : "file",
           "name": "inrtoduction to GUI.pptx",
           "link": "C:/A/B/Inheritance.ppt"
+          "desc" : "7Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
         },
         {
           "type" : "category",
@@ -78,11 +86,13 @@
               "type" : "file",
               "name": "JFrames.pptx",
               "link": "C:/A/C/L/Generics.pdf"
+              "desc" : "8Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
             },
             {
               "type" : "file",
               "name": "example.png",
               "link": "C:/A/D/L/Streams.docx"
+              "desc" : "9Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
             }
           ]
         }
