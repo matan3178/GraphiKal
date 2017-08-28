@@ -6,10 +6,38 @@
         <title>Graphi Kal</title>
 
         <script src="js/vis.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/script.js" defer="defer"></script>
 
         <link rel="stylesheet" href="css/vis.css" />
+
+        <style type="text/css">
+            #container {
+                margin: 0 auto;
+                width: 800px;
+                text-align: center;
+            }
+
+            #mynetwork {
+                width: 800px;
+                height: 700px;
+                margin: 0 auto;
+            }
+
+            input[type="image"] {
+                width: 26px;
+                height: 26px;
+                margin-bottom: -8px;
+            }
+        </style>
     </head>
     <body>
-
+        <div id="container">
+            <form action="" method="post">
+                <input type="text" id="search" placeholder="Search..." value="Java" />
+                <input type="image" src="pics/search.png" value="Go!" />
+            </form>
+            <div id="mynetwork"></div>
+        </div>
     </body>
 </html>
