@@ -1,47 +1,45 @@
 {
-	name: Java
+	name: "Java"
 	categories:
 	[
 		{
-			name: Java tutorials,
+			name: "Java tutorials",
 			files:
 			[
 				{
-					name: Inheritance.ppt,
-					link: C:/A/B/Inheritance.ppt
+					name: "Inheritance.ppt",
+					link: "C:/A/B/Inheritance.ppt"
 				}
 			],
 			categories:
 			[
-				name: Advanced java tutorials,
+				name: "Advanced java tutorials",
 				files:
 				[
 					{
-						name: Generics.pdf,
-						link: C:/A/C/L/Generics.pdf
+						name: "Generics.pdf",
+						link: "C:/A/C/L/Generics.pdf"
 					},
 					{
-						name: Streams.docx,
-						link: C:/A/D/L/Streams.docx
+						name: "Streams.docx",
+						link: "C:/A/D/L/Streams.docx"
 					}
 				]
 			]
 		},
 		{
-			name: Some secret project,
+			name: "Some secret project",
 			files:
 			[
 				{
-					name: Team1.xlsx
-					link: C:/A/D/D/Team1.xlsx
+					name: "Team1.xlsx"
+					link: "C:/A/D/D/Team1.xlsx"
 				},
 				{
-					name: Project-image.png,
-					link: C:/D/B/Project-image.png
+					name: "Project-image.png",
+					link: "C:/D/B/Project-image.png"
 				}
 			]
 		}
 	]
-	
-
 }
