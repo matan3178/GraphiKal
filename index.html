@@ -12,16 +12,32 @@
         <link rel="stylesheet" href="css/vis.css" />
 
         <style type="text/css">
+            html {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
             #container {
-                margin: 0 auto;
-                width: 800px;
+                position: relative;
+                width: 100%;
+                height: 100%;
                 text-align: center;
             }
 
+            #form {
+                position: fixed;
+                top: 0;
+            }
+
             #mynetwork {
-                width: 800px;
-                height: 700px;
-                margin: 0 auto;
+                position: relative;
+                width: 100%;
+                height: 100%;
             }
 
             input[type="image"] {
@@ -33,10 +49,12 @@
     </head>
     <body>
         <div id="container">
-            <form action="" method="post">
-                <input type="text" id="search" placeholder="Search..." value="Java" />
-                <input type="image" src="pics/search.png" value="Go!" />
-            </form>
+            <div id="form">
+                <form action="" method="post">
+                    <input type="text" id="search" placeholder="Search..." value="Java" />
+                    <input type="image" src="pics/search.png" />
+                </form>
+            </div>
             <div id="mynetwork"></div>
         </div>
     </body>

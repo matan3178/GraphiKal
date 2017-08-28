@@ -1,23 +1,27 @@
 {
+  "type" : "category",
   "name": "Java",
-  "categories": [
+  "neighbors": [
     {
-      "name": "Java tutorials",
-      "files": [
+      "type" : "category",
+      "name": "Java Tutorials",
+      "neighbors": [
         {
-          "name": "Inheritance.ppt",
+          "type" : "file",
+          "name": "Inheritance.pptx",
           "link": "C:/A/B/Inheritance.ppt"
-        }
-      ],
-      "categories": [
+        },
         {
+          "type" : "category",
           "name": "Advanced java tutorials",
-          "files": [
+          "neighbors": [
             {
+              "type" : "file",
               "name": "Generics.pdf",
               "link": "C:/A/C/L/Generics.pdf"
             },
             {
+              "type" : "file",
               "name": "Streams.docx",
               "link": "C:/A/D/L/Streams.docx"
             }
@@ -26,14 +30,17 @@
       ]
     },
     {
+      "type" : "category",
       "name": "Some secret project",
-      "files": [
+      "neighbors": [
         {
-          "name": "Team1.xlsx",
+          "type" : "file",
+          "name": "Team1.xls",
           "link": "C:/A/D/D/Team1.xlsx"
         },
         {
-          "name": "Project-image.png",
+          "type" : "file",
+          "name": "Project-image.jpeg",
           "link": "C:/D/B/Project-image.png"
         }
       ]
