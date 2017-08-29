@@ -8,9 +8,24 @@ imgByExt = {
     "pdf" : "pdf",
     "png" : "image",
     "jpg" : "image",
-    "jpeg" : "image"
+    "jpeg" : "image",
+    "txt" : "txt"
 };
 var DIR = "pics/";
+
+function breakLines(str, lineMaxLen) {
+    str = str.trim();
+    if (str.length <= lineMaxLen) {
+        return str;
+    }
+
+    var lineActualLen = str.lastIndexOf(" ", lineMaxLen);
+    if (lineActualLen === -1) {
+        lineActualLen = lineMaxLen;
+    }
+
+    return str.substr(0, lineActualLen) + "\n" + breakLines(str.substr(lineActualLen), lineMaxLen);
+}
 
 function parseGraph(root, nodes, edges) {
     root.parent = 0;
@@ -18,13 +33,13 @@ function parseGraph(root, nodes, edges) {
     var queue = [root];
 
     var id = 1;
-    while (queue.length > 0) {
+    while (queue.length > 0) { // BFS YEA
         var v = queue.shift();
 
-        var node = {"id": id, "label": v.name};
+        var node = {"id": id, "label": breakLines(v.name, 15)};
         if (v.type === "file") {
             var ext = v.name.split('.').pop();
-            Object.assign(node, { "shape": 'image', "image": DIR + imgByExt[ext] + '.png' });
+            Object.assign(node, { "shape": 'image', "image": DIR + imgByExt[ext] + '.png', "desc" : v.desc });
         }
 
         if (id === 1)
@@ -56,11 +71,14 @@ function parseGraph(root, nodes, edges) {
             var edges = [];
             parseGraph(graph, nodes, edges);
 
-            var container = document.getElementById('mynetwork');
+            var container = document.getElementById('graph');
+
+            var nodesDS = new vis.DataSet(nodes);
+            var edgesDS = new vis.DataSet(edges);
 
             var data = {
-                nodes: new vis.DataSet(nodes),
-                edges: new vis.DataSet(edges)
+                nodes: nodesDS,
+                edges: edgesDS
             };
             var options = {
                 nodes : {
@@ -71,6 +89,40 @@ function parseGraph(root, nodes, edges) {
             };
 
             var network = new vis.Network(container, data, options);
+
+            network.on("click", function(p) {
+                $side = $("#side");
+                if (p.nodes.length > 0) {
+                    var node = nodesDS.get(p.nodes[0]);
+                    if (node.shape === 'image') {
+                        $side.children("img").prop("src", node.image)
+                            .siblings("h3").text(node.label)
+                            .siblings("p").text(node.desc);
+
+                        if ($side.is(':hidden')) {
+                            $side.animate({width:'toggle'},200);
+                        }
+                    }
+                    else if ($side.is(':visible')) {
+                        $side.animate({width:'toggle'},200);
+                    }
+                }
+                else if ($side.is(':visible')) {
+                    $side.animate({width:'toggle'},200);
+                }
+            });
+        });
+
+        $("#search").on("focus", function() {
+            $("#dark").fadeIn();
+        }).on("blur", function() {
+            $("#dark").fadeOut();
+        });
+
+        $("#x").on('click', function() {
+            if ($("#side").is(':visible')) {
+                $("#side").animate({width:'toggle'},200);
+            }
         });
     });
 })(jQuery);

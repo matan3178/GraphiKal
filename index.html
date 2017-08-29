@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
 
-        <title>Graphi Kal</title>
+        <title>GraphiKal</title>
 
         <script src="js/vis.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,12 +14,24 @@
         <style type="text/css">
             html {
                 height: 100%;
+                font-family: 'Segoe UI';
             }
 
             body {
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                background-color: #f5f5f5;
+            }
+
+            #dark {
+                background-color: #000;
+                opacity: 0.4;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                display: none;
             }
 
             #container {
@@ -29,33 +41,73 @@
                 text-align: center;
             }
 
+            #side {
+                background-color: #fff;
+                position: fixed;
+                left: 0;
+                width: 300px;
+                height: 100%;
+                z-index: 2;
+                box-shadow: -2px 0 10px #424141;
+                padding: 30px 5px 10px;
+                display: none;
+            }
+
+            #side img {
+                width: 100px;
+                height: auto;
+            }
+
+            #side h3 {
+
+            }
+
+            #side p {
+                margin-top: 50px;
+            }
+
             #form {
                 position: fixed;
                 top: 0;
+                width: 100%;
+                text-align: center;
+                z-index: 4;
             }
 
-            #mynetwork {
+            #graph {
                 position: relative;
                 width: 100%;
                 height: 100%;
             }
 
-            input[type="image"] {
-                width: 26px;
-                height: 26px;
-                margin-bottom: -8px;
+            #search {
+                margin-top: 10px;
+                padding:10px 10px 7px;
+                border: 1px solid #909090;
+                font-size: 16px;
+                color: #909090;
+                outline: none;
+                border-radius: 15px;
+                opacity: 0.71070;
             }
         </style>
     </head>
     <body>
+        <div id="dark"></div>
         <div id="container">
+            <div id="side">
+                <img alt="icon" src="" />
+
+                <h3></h3>
+
+                <p>Some Description Some Description Some Description Some Description Some Description</p>
+            </div>
             <div id="form">
                 <form action="" method="post">
-                    <input type="text" id="search" placeholder="Search..." value="Java" />
-                    <input type="image" src="pics/search.png" />
+                    <input id="search" type="text" id="search" placeholder="Search..." value="Java" />
                 </form>
             </div>
-            <div id="mynetwork"></div>
+            <div id="graph"></div>
         </div>
     </body>
 </html>
