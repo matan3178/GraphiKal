@@ -1,0 +1,60 @@
+{
+  "type" : "category",
+  "name": "Python",
+  "neighbors": [
+    {
+      "type" : "category",
+      "name": "Editors",
+      "neighbors": [
+        {
+          "type" : "file",
+          "name": "notepadpp.pdf",
+          "link": "C:/A/B/notepadpp.pdf",
+          "desc" : "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede"
+        },
+        {
+          "type" : "file",
+          "name": "idlePython.pdf",
+          "link": "C:/A/C/L/idlePython.pdf",
+          "desc" : "1Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+        },
+        {
+          "type" : "file",
+          "name": "pycharm.pptx",
+          "link": "C:/A/D/L/pycharm.pptx",
+          "desc" : "2Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+        }
+      ]
+    },
+    {
+      "type" : "category",
+      "name": "Python Libraries",
+      "neighbors": [
+        {
+          "type" : "file",
+          "name": "sockets.doc",
+          "link": "C:/A/D/D/sockets.doc",
+          "desc" : "3Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+        },
+        {
+          "type" : "file",
+          "name": "anti-gravity.pdf",
+          "link": "C:/D/B/anti-gravity.pdf",
+          "desc" : "4Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+        },
+        {
+          "type" : "file",
+          "name": "numpy.pptx",
+          "link": "C:/D/B/numpy.pptx",
+          "desc" : "4Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+        }
+      ]
+    },
+    {
+      "type" : "file",
+      "name": "Documentation.pdf",
+      "link": "C:/A/D/D/Documentation.pdf",
+      "desc" : "5Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna."
+    }
+  ]
+}

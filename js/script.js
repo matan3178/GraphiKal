@@ -58,9 +58,9 @@ function parseGET(url)
     return (GET);
 }
 
-var q = parseGET()['q'];
+var getParams = parseGET();
 
-function parseGraph(root, nodes, edges) {
+function parseGraph(rootName, root, nodes, edges) {
     root.parent = 0;
 
     var queue = [root];
@@ -72,17 +72,18 @@ function parseGraph(root, nodes, edges) {
         var node = {"id": id, "label": breakLines(v.name, 15)};
         if (v.type === "file") {
             var ext = v.name.split('.').pop();
-            Object.assign(node, { "label" : v.name, "shape": 'image', "image": DIR + imgByExt[ext] + '.png', "desc" : v.desc });
+            var font = { size: 12};
+            Object.assign(node, { "margin": 70, "font": font, "label" : v.name, "path" : v.link, "shape": 'image', "image": DIR + imgByExt[ext] + '.png', "desc" : v.desc });
         }
 
         if (id === 1) {
             Object.assign(node, {
-                "color": "green",
+                "color": "#1900d3",
                 "font": {
                     "color": "white",
-                    "size": 36
+                    "size": 40
                 },
-                "label": q ? q : node.label
+                "label": rootName ? rootName : node.label
             });
         }
 
@@ -102,12 +103,14 @@ function parseGraph(root, nodes, edges) {
 
 (function($) {
     $(function () {
-        $.get("format/web_format.json").done(function(graph) {
+        var q = getParams['q'] ? getParams['q'] : 'Java';
+
+        $.get("format/" + q + ".json").done(function(graph) {
             var nodes = [];
             var edges = [];
-            parseGraph(graph, nodes, edges);
+            parseGraph(q, graph, nodes, edges);
 
-            var container = document.getElementById('graph');
+            var container = $("#graph")[0];
 
             var nodesDS = new vis.DataSet(nodes);
             var edgesDS = new vis.DataSet(edges);
@@ -119,7 +122,8 @@ function parseGraph(root, nodes, edges) {
             var options = {
                 nodes : {
                     font : {
-                        face : "Segoe UI"
+                        face : "Segoe UI",
+                        size : 18
                     }
                 }
             };
@@ -132,7 +136,8 @@ function parseGraph(root, nodes, edges) {
                     var node = nodesDS.get(p.nodes[0]);
                     if (node.shape === 'image') {
                         $side.children("img").prop("src", node.image)
-                            .siblings("h3").text(node.label)
+                            .siblings("a").text(node.label)
+                                .prop("href", node.path)
                             .siblings("p").text(node.desc);
 
                         if ($side.is(':hidden')) {
@@ -145,6 +150,15 @@ function parseGraph(root, nodes, edges) {
                 }
                 else if ($side.is(':visible')) {
                     $side.animate({width:'toggle'},200);
+                }
+            });
+
+            network.on("doubleClick", function(p) {
+                if (p.nodes.length > 0) {
+                    var node = nodesDS.get(p.nodes[0]);
+                    if (node.shape === 'image') {
+                        window.open(node.path);
+                    }
                 }
             });
         });
